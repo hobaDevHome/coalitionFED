@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
           name: e.name,
           gender: e.gender,
           age: e.age,
+          pic: e.profile_picture,
         };
       });
       console.log("names", namesList);
@@ -58,18 +59,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (userListElement) {
       users.forEach((user) => {
-        // Create a new list item for each user
         const userItem = document.createElement("div");
-        userItem.className = "list-group-item";
+        userItem.className = "list-item";
 
-        // Add user details
         userItem.innerHTML = `
-                <h5 class="mb-1">${user.name}</h5>
-                <p class="mb-1">Gender: ${user.gender}</p>
-                <small>Age: ${user.age}</small>
+        <div class="patientListItemData">
+        <div>
+          <img
+            src=${user.pic}  alt="patient picture"
+          />
+        </div>
+        <div>
+          <div class="patientName">${user.name}</div>
+          <div class="patientAge">${user.gender}, ${user.age}</div>
+        </div>
+      </div>
+      <div>
+        <img
+          src="images/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+          alt="tech care logo"
+        />
+      </div>
             `;
 
-        // Append the list item to the user list
         userListElement.appendChild(userItem);
       });
     } else {
