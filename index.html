@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My HTML Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="./style/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile Information</h1>
+      <div id="profileContainer" class="card" style="width: 18rem">
+        <img id="profilePicture" class="card-img-top" alt="Profile Picture" />
+        <div class="card-body">
+          <h5 id="profileName" class="card-title"></h5>
+          <p id="phoneNumber" class="card-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, only needed if using Bootstrap JS components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to fetch data from API -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
