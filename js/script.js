@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
           pic: e.profile_picture,
         };
       });
-      console.log("jessicaObject", jessicaObject.lab_results);
+      console.log("jessicaObject", jessicaObject);
       displayDiagnosisList(jessicaObject.diagnostic_list);
       displayPatientsList(namesList);
       displayLabResultsList(jessicaObject.lab_results);
@@ -42,17 +42,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   function displayProfile(profile) {
-    const profileNameElement = document.getElementById("profileName");
-    const phoneNumberElement = document.getElementById("phoneNumber");
-    const profilePictureElement = document.getElementById("profilePicture");
+    const patientName = document.getElementById("patientName");
+    const patientImage = document.getElementById("patientImage");
+    const dobData = document.getElementById("dobData");
+    const genderIcon = document.getElementById("genderIcon");
+    const gender = document.getElementById("gender");
+    const contact = document.getElementById("contact");
+    const emergency = document.getElementById("emergency");
+    const insurance = document.getElementById("insurance");
 
-    if (profileNameElement && phoneNumberElement && profilePictureElement) {
-      profileNameElement.textContent = profile.name;
-      phoneNumberElement.textContent = profile.phone_number;
-      profilePictureElement.src = profile.profile_picture;
-      profilePictureElement.alt = profile.name + "'s Profile Picture";
-    } else {
-      console.error("One or more elements are missing from the HTML.");
+    if (patientName) patientName.textContent = profile.name;
+    if (patientImage) patientImage.src = profile.profile_picture;
+    if (dobData) dobData.textContent = profile.date_of_birth;
+    if (gender) gender.textContent = profile.gender;
+    if (contact) contact.textContent = profile.phone_number;
+    if (emergency) emergency.textContent = profile.emergency_contact;
+    if (insurance) insurance.textContent = profile.insurance_type;
+    if (genderIcon) {
+      if (profile.gender == "Female") {
+        genderIcon.src = "images/FemaleIcon.svg";
+      } else {
+        genderIcon.src = "images/MaleIcon.svg";
+      }
     }
   }
 
@@ -62,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (patientListElement) {
       list.forEach((patient) => {
         const patientItem = document.createElement("div");
-        patientItem.className = "list-item";
+        patientItem.className = `list-item ${
+          patient.name == "Jessica Taylor" ? "list-item-active" : ""
+        }`;
 
         patientItem.innerHTML = `
         <div class="patientListItemData">

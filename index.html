@@ -78,6 +78,41 @@
             </div>
           </div>
           <div class="col-6">
+            <div class="diagHistory">
+              <h4 class="column_title">Diagnosis History</h4>
+
+              <div class="histoyrBlocks">
+                <div class="histoyrBlock block1">
+                  <img
+                    src="images/respiratory rate.svg"
+                    alt="respiratory rate"
+                  />
+                  <div class="line1">Respiratory Rate</div>
+                  <div class="line2">20 bpm</div>
+                  <div class="line3">Normal</div>
+                </div>
+                <div class="histoyrBlock block2">
+                  <img src="images/temperature.svg" alt="Temperature" />
+                  <div class="line1">Temperature</div>
+                  <div class="line2">98.6°F</div>
+                  <div class="line3">Normal</div>
+                </div>
+                <div class="histoyrBlock block3">
+                  <img src="images/HeartBPM.svg" alt="Heart Rate" />
+                  <div class="line1">Heart Rate</div>
+                  <div class="line2">20 bpm</div>
+                  <div class="line3 heartindicator">
+                    <div>
+                      <img
+                        src="images/ArrowDown.svg"
+                        alt="heart rate indications"
+                      />
+                    </div>
+                    <div class="heartIndcText">Lower than Average</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="diaglist">
               <h4 class="column_title">Diagnostic List</h4>
               <div class="row diabHeader">
@@ -92,34 +127,33 @@
           <div class="col profile_col">
             <div class="profile">
               <img
+                id="patientImage"
                 src="images/Layer 2@2x.png"
                 alt="patient profile picture"
                 class="profile_img"
               />
 
-              <h4 id="patientName" class="column_title patient_name">
-                Jessica Taylor
-              </h4>
+              <h4 id="patientName" class="column_title patient_name"></h4>
               <div class="patientDataLine">
                 <div class="patientDataLineIcon">
                   <img src="images/BirthIcon.svg" alt="dob" />
                 </div>
                 <div class="patientDataLineDetails">
                   <div class="dobLbele">Date Of Birth</div>
-                  <div id="dobData" class="dobData">August 23, 1996</div>
+                  <div id="dobData" class="dobData"></div>
                 </div>
               </div>
               <div class="patientDataLine">
                 <div class="patientDataLineIcon">
                   <img
                     id="genderIcon"
-                    src="images/FemaleIcon.svg"
+                    src="images/MaleIcon.svg"
                     alt="gender icon"
                   />
                 </div>
                 <div class="patientDataLineDetails">
                   <div class="dobLbele">Gender</div>
-                  <div id="gender" class="dobData">Female</div>
+                  <div id="gender" class="dobData"></div>
                 </div>
               </div>
               <div class="patientDataLine">
@@ -128,7 +162,7 @@
                 </div>
                 <div class="patientDataLineDetails">
                   <div class="dobLbele">Contact Info.</div>
-                  <div id="contact" class="dobData">(415) 555-1234</div>
+                  <div id="contact" class="dobData"></div>
                 </div>
               </div>
               <div class="patientDataLine">
@@ -137,7 +171,7 @@
                 </div>
                 <div class="patientDataLineDetails">
                   <div class="dobLbele">Emergency Contacts</div>
-                  <div id="emergency" class="dobData">(415) 555-1234</div>
+                  <div id="emergency" class="dobData"></div>
                 </div>
               </div>
               <div class="patientDataLine">
@@ -146,9 +180,7 @@
                 </div>
                 <div class="patientDataLineDetails">
                   <div class="dobLbele">Insurance Provider</div>
-                  <div id="insurance" class="dobData">
-                    Sunrise Health Assurance
-                  </div>
+                  <div id="insurance" class="dobData"></div>
                 </div>
               </div>
               <div class="buttoncontainer">
@@ -164,25 +196,10 @@
       </div>
     </div>
 
-    <!-- Bootstrap JS (optional, only needed if using Bootstrap JS components) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Script to fetch data from API -->
     <script src="/js/script.js"></script>
   </body>
 </html>
-
-<!-- <h1>Profile Information</h1>
-      <div id="profileContainer" class="card" style="width: 18rem">
-        <img id="profilePicture" class="card-img-top" alt="Profile Picture" />
-        <div class="card-body">
-          <h5 id="profileName" class="card-title"></h5>
-          <p id="phoneNumber" class="card-text"></p>
-        </div>
-      </div>
-      <h1>User List</h1>
-      <div id="userList" class="list-group">
-        User items will be appended here
-      </div> -->

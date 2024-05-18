@@ -92,7 +92,6 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 15px;
   padding: 0;
   height: 1054px;
 }
@@ -126,7 +125,9 @@ p {
 .list-item:hover {
   background-color: #d8fcf7;
 }
-
+.list-item-active {
+  background-color: #d8fcf7;
+}
 .patientListItemData {
   display: flex;
   flex-direction: row;
@@ -279,4 +280,62 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* /////////////////// diagnositic history ////////////// */
+.diagHistory {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.histoyrBlocks {
+  display: flex;
+}
+.histoyrBlock {
+  width: 100%;
+  height: 242px;
+  border-radius: 12px;
+  color: #072635;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 20px;
+  padding-top: 16px;
+}
+
+.line1 {
+  font-size: 16px;
+  margin-top: 16px;
+}
+.line2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.line3 {
+  font-size: 14px;
+  margin-top: 16px;
+}
+.block1 {
+  background-color: #e0f3fa;
+  margin-right: 20px;
+}
+.block2 {
+  background-color: #ffe6e9;
+  margin-right: 20px;
+}
+.block3 {
+  background-color: #ffe6f1;
+}
+.heartindicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heartIndcText {
+  margin-left: 8px;
 }
