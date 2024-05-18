@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let username = "coalition";
   let password = "skills-test";
   let auth = btoa(`${username}:${password}`);
-  let currentObject;
+  let jessicaObject;
   let namesList;
 
   // Authenticate (dummy API)
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
       throw response;
     })
     .then(function (data) {
-      let currentObject = data.find((e) => e.name === "Jessica Taylor");
-      displayProfile(currentObject);
+      jessicaObject = data.find((e) => e.name === "Jessica Taylor");
+      displayProfile(jessicaObject);
 
       namesList = data.map((e) => {
         return {
@@ -32,8 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
           pic: e.profile_picture,
         };
       });
-      console.log("names", namesList);
-      displayUserList(namesList);
+      console.log("jessicaObject", jessicaObject.lab_results);
+      displayDiagnosisList(jessicaObject.diagnostic_list);
+      displayPatientsList(namesList);
+      displayLabResultsList(jessicaObject.lab_results);
     })
     .catch(function (error) {
       console.warn(error);
@@ -54,24 +56,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function displayUserList(users) {
-    const userListElement = document.getElementById("userList");
+  function displayPatientsList(list) {
+    const patientListElement = document.getElementById("patlist");
 
-    if (userListElement) {
-      users.forEach((user) => {
-        const userItem = document.createElement("div");
-        userItem.className = "list-item";
+    if (patientListElement) {
+      list.forEach((patient) => {
+        const patientItem = document.createElement("div");
+        patientItem.className = "list-item";
 
-        userItem.innerHTML = `
+        patientItem.innerHTML = `
         <div class="patientListItemData">
         <div>
           <img
-            src=${user.pic}  alt="patient picture"
+            src=${patient.pic}  alt="patient picture"
           />
         </div>
         <div>
-          <div class="patientName">${user.name}</div>
-          <div class="patientAge">${user.gender}, ${user.age}</div>
+          <div class="patientName">${patient.name}</div>
+          <div class="patientAge">${patient.gender}, ${patient.age}</div>
         </div>
       </div>
       <div>
@@ -82,10 +84,54 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
             `;
 
-        userListElement.appendChild(userItem);
+        patientListElement.appendChild(patientItem);
       });
     } else {
       console.error("The user list element is missing from the HTML.");
+    }
+  }
+  function displayDiagnosisList(list) {
+    const diagnosisListElement = document.getElementById("diagnosisList");
+
+    if (diagnosisListElement) {
+      list.forEach((diagnosis) => {
+        const diagnosisItem = document.createElement("div");
+
+        diagnosisItem.innerHTML = `
+        <div class="row diaRow">
+                <div class="col-4">${diagnosis.name}</div>
+                <div class="col-6">${diagnosis.description}</div>
+                <div class="col-2">${diagnosis.status}</div>
+              </div>
+            `;
+
+        diagnosisListElement.appendChild(diagnosisItem);
+      });
+    } else {
+      console.error("The diagnosis list element is missing from the HTML.");
+    }
+  }
+  function displayLabResultsList(list) {
+    const labResultsListElement = document.getElementById("labResList");
+
+    if (labResultsListElement) {
+      list.forEach((labItem) => {
+        const labResItem = document.createElement("div");
+
+        labResItem.innerHTML = `
+        <div class="labresItem">
+                  <div>${labItem}</div>
+                  <img
+                    src="images/download_FILL0_wght300_GRAD0_opsz24 (1).svg"
+                    alt="download lab results"
+                  />
+                </div>
+            `;
+
+        labResultsListElement.appendChild(labResItem);
+      });
+    } else {
+      console.error("The lab results list element is missing from the HTML.");
     }
   }
 });

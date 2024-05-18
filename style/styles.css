@@ -8,12 +8,11 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 10px;
   text-align: center;
   background-color: #f6f7f8;
-  border: 1px solid red;
 }
 
 h1 {
@@ -36,15 +35,6 @@ p {
   height: 60px;
 }
 
-.col,
-.col-6 {
-  /* border: 1px solid blue; */
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 .logoContainer {
   display: flex;
   justify-items: center;
@@ -93,7 +83,8 @@ p {
 
 /* ////////////////// patients list ///////////////////// */
 
-.patlist {
+.patlist,
+.diaglist {
   background-color: #fff;
   border-radius: 15px;
   margin-top: 15px;
@@ -115,9 +106,9 @@ p {
 
 .list-group {
   margin-top: 10px;
-  max-height: 800px;
+  max-height: 700px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .list-item {
@@ -151,4 +142,67 @@ p {
   font-size: 12px;
   text-align: left;
   color: #707070;
+}
+.column_title {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ///////////// diagnostic list ///////////////// */
+.diaglist {
+  padding: 15px;
+}
+
+.diabHeader {
+  background-color: #f6f7f8;
+  height: 48px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #072635;
+  text-align: left;
+}
+
+.diaRow {
+  color: #072635;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-bottom: 1px solid #f6f7f8;
+}
+.diag-list-group {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* /////////////////// lab results ///////////////// */
+.lab-list-group {
+  color: #072635;
+  font-size: 14px;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.labresItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  padding: 10px;
+}
+.labresItem:hover {
+  background-color: #f6f7f8;
 }

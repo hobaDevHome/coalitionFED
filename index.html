@@ -68,17 +68,33 @@
           <div class="col">
             <div class="patlist">
               <div class="search">
-                <h4>Patients</h4>
+                <h4 class="column_title">Patients</h4>
                 <img
                   src="images/search_FILL0_wght300_GRAD0_opsz24.svg"
                   alt="tech care logo"
                 />
               </div>
-              <div id="userList" class="list-group"></div>
+              <div id="patlist" class="list-group"></div>
             </div>
           </div>
-          <div class="col-6">2 of 3 (wider)</div>
-          <div class="col">3 of 3</div>
+          <div class="col-6">
+            <div class="diaglist">
+              <h4 class="column_title">Diagnostic List</h4>
+              <div class="row diabHeader">
+                <div class="col-4">Problem/Diagnosis</div>
+                <div class="col-6">Description</div>
+                <div class="col-2">Status</div>
+              </div>
+
+              <div id="diagnosisList" class="diag-list-group"></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="diaglist">
+              <h4 class="column_title">Lab Results</h4>
+              <div id="labResList" class="lab-list-group"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
