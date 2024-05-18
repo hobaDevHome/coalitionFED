@@ -9,6 +9,7 @@ body {
 
 .container {
   max-width: 1600px;
+
   margin: 0 auto;
   padding: 10px;
   text-align: center;
@@ -93,6 +94,7 @@ p {
   width: 100%;
   padding: 15px;
   padding: 0;
+  height: 1054px;
 }
 
 .search {
@@ -106,7 +108,7 @@ p {
 
 .list-group {
   margin-top: 10px;
-  max-height: 700px;
+  max-height: 960px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -151,6 +153,7 @@ p {
 /* ///////////// diagnostic list ///////////////// */
 .diaglist {
   padding: 15px;
+  height: 296px;
 }
 
 .diabHeader {
@@ -180,7 +183,7 @@ p {
   border-bottom: 1px solid #f6f7f8;
 }
 .diag-list-group {
-  max-height: 200px;
+  max-height: 250px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -205,4 +208,46 @@ p {
 }
 .labresItem:hover {
   background-color: #f6f7f8;
+}
+
+/* //////////// profile ////////////// */
+.profile {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+.profile_img {
+  width: 200px;
+  height: 200px;
+}
+.patientDataLine {
+  display: flex;
+  flex-direction: row;
+}
+.patientDataLineIcon {
+}
+.patientDataLineDetails {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #072635;
+  align-items: start;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.dobData {
+  margin-top: 3px;
+  font-weight: bold;
+}
+.patient_name {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.profile_col {
+  height: 1054px;
 }
