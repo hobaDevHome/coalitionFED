@@ -176,6 +176,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  margin-right: 1px;
 }
 .list-item:hover {
   background-color: #d8fcf7;
