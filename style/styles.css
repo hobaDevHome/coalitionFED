@@ -140,14 +140,6 @@ body {
   margin: 7px;
 }
 
-.diaglist {
-  background-color: #fff;
-  border-radius: 16px;
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 .patient_col {
   margin-top: 32px;
   padding-bottom: 20px;
@@ -225,9 +217,15 @@ body {
 
 /* ///////////// diagnostic list ///////////////// */
 .diaglist {
-  height: 296px;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  height: 350px;
 }
-
 .diabHeader {
   background-color: #f6f7f8;
   height: 48px;
@@ -291,6 +289,7 @@ body {
 .profile-container {
   padding: 0;
   height: 1054px;
+  margin-left: 18px;
 }
 .profile {
   background-color: #fff;
@@ -370,6 +369,7 @@ body {
   width: 100%;
   margin-bottom: 20px;
   padding: 20px;
+  height: 673px;
 }
 .histoyrBlocks {
   display: flex;
