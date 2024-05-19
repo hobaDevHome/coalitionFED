@@ -14,242 +14,260 @@
   </head>
   <body>
     <div class="container">
-      <div class="menu">
-        <div class="row">
-          <div class="col">
-            <div class="logoContainer">
-              <img src="images/TestLogo.svg" alt="tech care logo" />
+      <div class="row header">
+        <div class="col">
+          <div class="logoContainer">
+            <img src="images/TestLogo.svg" alt="tech care logo" />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="buttonscontainer">
+            <div class="menubutton">
+              <img
+                src="images/home_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="tech care logo"
+              />
+              Overview
+            </div>
+            <div class="activeMenucButton">
+              <img
+                src="images/group_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="tech care logo"
+              />
+              Patients
+            </div>
+            <div class="menubutton">
+              <img
+                src="images/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="tech care logo"
+              />
+              Schedule
+            </div>
+            <div class="menubutton">
+              <img
+                src="images/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="tech care logo"
+              />
+              Message
+            </div>
+            <div class="menubutton">
+              <img
+                src="images/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="tech care logo"
+              />
+              Transactions
             </div>
           </div>
-          <div class="col-6">
-            <div class="buttonscontainer">
-              <div class="menubutton">
-                <img
-                  src="images/home_FILL0_wght300_GRAD0_opsz24.svg"
-                  alt="tech care logo"
-                />
-                Overview
-              </div>
-              <div class="activeMenucButton">
-                <img
-                  src="images/group_FILL0_wght300_GRAD0_opsz24.svg"
-                  alt="tech care logo"
-                />
-                Patients
-              </div>
-              <div class="menubutton">
-                <img
-                  src="images/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
-                  alt="tech care logo"
-                />
-                Schedule
-              </div>
-              <div class="menubutton">
-                <img
-                  src="images/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
-                  alt="tech care logo"
-                />
-                Message
-              </div>
-              <div class="menubutton">
-                <img
-                  src="images/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
-                  alt="tech care logo"
-                />
-                Transactions
-              </div>
-            </div>
+        </div>
+        <div class="col doctor-menu">
+          <div class="avatar">
+            <img
+              src="images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+              alt="tech care logo"
+            />
           </div>
-          <div class="col">user</div>
+          <div class="doctor-login-data">
+            <div class="doctor-name">Dr. Jose Simmons</div>
+            <div class="doctor-spec">General Practitioner</div>
+          </div>
+          <div class="vert-separtor"></div>
+          <div class="gear-icon">
+            <img
+              src="images/settings_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="tech care logo"
+            />
+          </div>
+          <div class="meuci-dots">
+            <img
+              src="images/more_vert_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="tech care logo"
+            />
+          </div>
         </div>
       </div>
-      <div>
-        <div class="row gx-5">
-          <div class="col">
-            <div class="patlist">
-              <div class="search">
-                <h4 class="column_title">Patients</h4>
-                <img
-                  src="images/search_FILL0_wght300_GRAD0_opsz24.svg"
-                  alt="tech care logo"
-                />
-              </div>
-              <div id="patlist" class="list-group"></div>
+
+      <div class="row main-cont">
+        <div class="col">
+          <div class="patlist">
+            <div class="search">
+              <h4 class="column_title">Patients</h4>
+              <img
+                src="images/search_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="tech care logo"
+              />
             </div>
+            <div id="patlist" class="list-group"></div>
           </div>
-          <div class="col-6">
-            <div class="diagHistory">
-              <h4 class="column_title">Diagnosis History</h4>
-              <div class="chartblock">
-                <div class="chart-container">
-                  <div class="title-container">
-                    <div class="chart_title">Blood Pressure</div>
-                    <div class="chart-time">
-                      <div class="six-month">Last 6 months</div>
-                      <div>
-                        <img
-                          src="images/expand_more_FILL0_wght300_GRAD0_opsz24.svg"
-                          alt="Systolic indication"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="blood-pressur-contianer">
-                  <div class="systolic">
-                    <div class="sys-line">
-                      <div class="circle circle1"></div>
-                      <div class="sys-text">Systolic</div>
-                    </div>
-                    <div id="systolic_value" class="sys-data"></div>
-
-                    <div class="sys-arrow-container">
-                      <div>
-                        <img
-                          src=""
-                          alt="Systolic indication"
-                          id="systolic_icon"
-                        />
-                      </div>
-                      <div id="systolic_levels" class="sys-text"></div>
-                    </div>
-                  </div>
-                  <div class="separtor"></div>
-                  <div class="systolic">
-                    <div class="sys-line">
-                      <div class="circle circle2"></div>
-                      <div class="sys-text">Diastolic</div>
-                    </div>
-                    <div id="diastolic_value" class="sys-data"></div>
-
-                    <div class="sys-arrow-container">
-                      <div>
-                        <img
-                          src=""
-                          alt="Systolic indication"
-                          id="diastolic_icon"
-                        />
-                      </div>
-                      <div id="diastolic_levels" class="sys-text"></div>
+        </div>
+        <div class="col-6">
+          <div class="diagHistory">
+            <h4 class="column_title">Diagnosis History</h4>
+            <div class="chartblock">
+              <div class="chart-container">
+                <div class="title-container">
+                  <div class="chart_title">Blood Pressure</div>
+                  <div class="chart-time">
+                    <div class="six-month">Last 6 months</div>
+                    <div>
+                      <img
+                        src="images/expand_more_FILL0_wght300_GRAD0_opsz24.svg"
+                        alt="Systolic indication"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="histoyrBlocks">
-                <div class="histoyrBlock block1">
-                  <img
-                    src="images/respiratory rate.svg"
-                    alt="respiratory rate"
-                  />
-                  <div class="line1">Respiratory Rate</div>
-                  <div class="line2" id="respiratory_value"></div>
-                  <div class="line3" id="respiratory_level">Normal</div>
-                </div>
-                <div class="histoyrBlock block2">
-                  <img src="images/temperature.svg" alt="Temperature" />
-                  <div class="line1">Temperature</div>
-                  <div class="line2" id="temperature_value"></div>
-                  <div class="line3" id="temperature_level"></div>
-                </div>
-                <div class="histoyrBlock block3">
-                  <img src="images/HeartBPM.svg" alt="Heart Rate" />
-                  <div class="line1">Heart Rate</div>
-                  <div class="line2" id="heart_rate_value"></div>
-                  <div class="line3 heartindicator">
+              <div class="blood-pressur-contianer">
+                <div class="systolic">
+                  <div class="sys-line">
+                    <div class="circle circle1"></div>
+                    <div class="sys-text">Systolic</div>
+                  </div>
+                  <div id="systolic_value" class="sys-data"></div>
+
+                  <div class="sys-arrow-container">
                     <div>
                       <img
                         src=""
-                        alt="heart rate indications"
-                        id="heart_rate_icon"
+                        alt="Systolic indication"
+                        id="systolic_icon"
                       />
                     </div>
-                    <div class="heartIndcText" id="heart_rate_level">
-                      Lower than Average
+                    <div id="systolic_levels" class="sys-text"></div>
+                  </div>
+                </div>
+                <div class="separtor"></div>
+                <div class="systolic">
+                  <div class="sys-line">
+                    <div class="circle circle2"></div>
+                    <div class="sys-text">Diastolic</div>
+                  </div>
+                  <div id="diastolic_value" class="sys-data"></div>
+
+                  <div class="sys-arrow-container">
+                    <div>
+                      <img
+                        src=""
+                        alt="Systolic indication"
+                        id="diastolic_icon"
+                      />
                     </div>
+                    <div id="diastolic_levels" class="sys-text"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="diaglist">
-              <h4 class="column_title">Diagnostic List</h4>
-              <div class="row diabHeader">
-                <div class="col-4">Problem/Diagnosis</div>
-                <div class="col-6">Description</div>
-                <div class="col-2">Status</div>
-              </div>
 
-              <div id="diagnosisList" class="diag-list-group"></div>
+            <div class="histoyrBlocks">
+              <div class="histoyrBlock block1">
+                <img src="images/respiratory rate.svg" alt="respiratory rate" />
+                <div class="line1">Respiratory Rate</div>
+                <div class="line2" id="respiratory_value"></div>
+                <div class="line3" id="respiratory_level">Normal</div>
+              </div>
+              <div class="histoyrBlock block2">
+                <img src="images/temperature.svg" alt="Temperature" />
+                <div class="line1">Temperature</div>
+                <div class="line2" id="temperature_value"></div>
+                <div class="line3" id="temperature_level"></div>
+              </div>
+              <div class="histoyrBlock block3">
+                <img src="images/HeartBPM.svg" alt="Heart Rate" />
+                <div class="line1">Heart Rate</div>
+                <div class="line2" id="heart_rate_value"></div>
+                <div class="line3 heartindicator">
+                  <div>
+                    <img
+                      src=""
+                      alt="heart rate indications"
+                      id="heart_rate_icon"
+                    />
+                  </div>
+                  <div class="heartIndcText" id="heart_rate_level">
+                    Lower than Average
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col profile_col">
-            <div class="profile">
-              <img
-                id="patientImage"
-                src="images/Layer 2@2x.png"
-                alt="patient profile picture"
-                class="profile_img"
-              />
+          <div class="diaglist">
+            <h4 class="column_title">Diagnostic List</h4>
+            <div class="row diabHeader">
+              <div class="col-4">Problem/Diagnosis</div>
+              <div class="col-6">Description</div>
+              <div class="col-2">Status</div>
+            </div>
 
-              <h4 id="patientName" class="column_title patient_name"></h4>
-              <div class="patientDataLine">
-                <div class="patientDataLineIcon">
-                  <img src="images/BirthIcon.svg" alt="dob" />
-                </div>
-                <div class="patientDataLineDetails">
-                  <div class="dobLbele">Date Of Birth</div>
-                  <div id="dobData" class="dobData"></div>
-                </div>
+            <div id="diagnosisList" class="diag-list-group"></div>
+          </div>
+        </div>
+        <div class="col profile_col">
+          <div class="profile">
+            <img
+              id="patientImage"
+              src="images/Layer 2@2x.png"
+              alt="patient profile picture"
+              class="profile_img"
+            />
+
+            <h4 id="patientName" class="column_title patient_name"></h4>
+            <div class="patientDataLine">
+              <div class="patientDataLineIcon">
+                <img src="images/BirthIcon.svg" alt="dob" />
               </div>
-              <div class="patientDataLine">
-                <div class="patientDataLineIcon">
-                  <img
-                    id="genderIcon"
-                    src="images/MaleIcon.svg"
-                    alt="gender icon"
-                  />
-                </div>
-                <div class="patientDataLineDetails">
-                  <div class="dobLbele">Gender</div>
-                  <div id="gender" class="dobData"></div>
-                </div>
-              </div>
-              <div class="patientDataLine">
-                <div class="patientDataLineIcon">
-                  <img src="images/PhoneIcon.svg" alt="contact icon" />
-                </div>
-                <div class="patientDataLineDetails">
-                  <div class="dobLbele">Contact Info.</div>
-                  <div id="contact" class="dobData"></div>
-                </div>
-              </div>
-              <div class="patientDataLine">
-                <div class="patientDataLineIcon">
-                  <img src="images/PhoneIcon.svg" alt="contact icon" />
-                </div>
-                <div class="patientDataLineDetails">
-                  <div class="dobLbele">Emergency Contacts</div>
-                  <div id="emergency" class="dobData"></div>
-                </div>
-              </div>
-              <div class="patientDataLine">
-                <div class="patientDataLineIcon">
-                  <img src="images/InsuranceIcon.svg" alt="contact icon" />
-                </div>
-                <div class="patientDataLineDetails">
-                  <div class="dobLbele">Insurance Provider</div>
-                  <div id="insurance" class="dobData"></div>
-                </div>
-              </div>
-              <div class="buttoncontainer">
-                <div class="showButton">Show All Information</div>
+              <div class="patientDataLineDetails">
+                <div class="dobLbele">Date Of Birth</div>
+                <div id="dobData" class="dobData"></div>
               </div>
             </div>
-            <div class="labList">
-              <h4 class="column_title">Lab Results</h4>
-              <div id="labResList" class="lab-list-group"></div>
+            <div class="patientDataLine">
+              <div class="patientDataLineIcon">
+                <img
+                  id="genderIcon"
+                  src="images/MaleIcon.svg"
+                  alt="gender icon"
+                />
+              </div>
+              <div class="patientDataLineDetails">
+                <div class="dobLbele">Gender</div>
+                <div id="gender" class="dobData"></div>
+              </div>
             </div>
+            <div class="patientDataLine">
+              <div class="patientDataLineIcon">
+                <img src="images/PhoneIcon.svg" alt="contact icon" />
+              </div>
+              <div class="patientDataLineDetails">
+                <div class="dobLbele">Contact Info.</div>
+                <div id="contact" class="dobData"></div>
+              </div>
+            </div>
+            <div class="patientDataLine">
+              <div class="patientDataLineIcon">
+                <img src="images/PhoneIcon.svg" alt="contact icon" />
+              </div>
+              <div class="patientDataLineDetails">
+                <div class="dobLbele">Emergency Contacts</div>
+                <div id="emergency" class="dobData"></div>
+              </div>
+            </div>
+            <div class="patientDataLine">
+              <div class="patientDataLineIcon">
+                <img src="images/InsuranceIcon.svg" alt="contact icon" />
+              </div>
+              <div class="patientDataLineDetails">
+                <div class="dobLbele">Insurance Provider</div>
+                <div id="insurance" class="dobData"></div>
+              </div>
+            </div>
+            <div class="buttoncontainer">
+              <div class="showButton">Show All Information</div>
+            </div>
+          </div>
+          <div class="labList">
+            <h4 class="column_title">Lab Results</h4>
+            <div id="labResList" class="lab-list-group"></div>
           </div>
         </div>
       </div>

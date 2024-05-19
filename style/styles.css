@@ -11,17 +11,9 @@ body {
   max-width: 1600px;
 
   margin: 0 auto;
-  padding: 10px;
+  padding: 18px;
   text-align: center;
   background-color: #f6f7f8;
-}
-
-h1 {
-  color: #333;
-}
-
-p {
-  color: #666;
 }
 
 #dataContainer {
@@ -30,10 +22,18 @@ p {
   padding: 10px;
 }
 /* /////////////////// header//////////// */
-.menu {
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
   background-color: #fff;
-  border-radius: 30px;
-  height: 60px;
+  border-radius: 70px;
+  height: 72px;
+  margin-left: 18px;
+  margin-right: 18px;
 }
 
 .logoContainer {
@@ -81,8 +81,43 @@ p {
   border: 1px solid transparent;
   width: 120px;
 }
+.doctor-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  margin-right: 40px;
+}
+.doctor-login-data {
+  margin-left: 8px;
+  margin-right: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.vert-separtor {
+  height: 40px;
+  background-color: #e3e4e6;
+  width: 1px;
+  margin-right: 19px;
+}
+.gear-icon {
+  margin-right: 12px;
+}
+.doctor-name {
+  color: #072635;
+  font-size: 14px;
+  font-weight: bold;
+}
+.doctor-spec {
+  color: #707070;
+  font-size: 14px;
+}
 
 /* ////////////////// patients list ///////////////////// */
+.main-cont {
+  margin: 7px;
+}
 
 .patlist,
 .diaglist {
