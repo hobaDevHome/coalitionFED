@@ -7,6 +7,26 @@ body {
   box-sizing: border-box;
 }
 
+.list-group::-webkit-scrollbar,
+.lab-list-group::-webkit-scrollbar,
+.diag-list-group::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list-group::-webkit-scrollbar-track,
+.lab-list-group::-webkit-scrollbar-track,
+.diag-list-group::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.list-group::-webkit-scrollbar-thumb,
+.lab-list-group::-webkit-scrollbar-thumb,
+.diag-list-group::-webkit-scrollbar-thumb {
+  background-color: #072635;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+  width: 6px;
+}
 .container {
   max-width: 1600px;
 

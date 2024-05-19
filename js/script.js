@@ -54,9 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const emergency = document.getElementById("emergency");
     const insurance = document.getElementById("insurance");
 
+    let formattedDate = formatDate(profile.date_of_birth);
+
     if (patientName) patientName.textContent = profile.name;
     if (patientImage) patientImage.src = profile.profile_picture;
-    if (dobData) dobData.textContent = profile.date_of_birth;
+    if (dobData) dobData.textContent = formattedDate;
     if (gender) gender.textContent = profile.gender;
     if (contact) contact.textContent = profile.phone_number;
     if (emergency) emergency.textContent = profile.emergency_contact;
@@ -244,7 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const diasData = historyArray.map((e) => {
       return e.blood_pressure.diastolic.value;
     });
-    console.log(historyArray, sysData, diasData);
 
     new Chart("myChart", {
       type: "line",
@@ -287,5 +288,32 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
+  }
+  function formatDate(date) {
+    let dateElements = date.split("/");
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    console.log(dateElements);
+    let monthNumber = dateElements[0];
+    let day = dateElements[1];
+    let year = dateElements[2];
+    let monthName = months.find((e, index) => index === monthNumber - 1);
+
+    let output = `${monthName} ${day}, ${year}`;
+
+    return output;
   }
 });
