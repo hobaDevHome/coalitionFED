@@ -1,12 +1,7 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Fetch data from API
   let username = "coalition";
   let password = "skills-test";
   let auth = btoa(`${username}:${password}`);
-  let jessicaObject;
-  let namesList;
 
   fetch("https://fedskillstest.coalitiontechnologies.workers.dev", {
     headers: {
@@ -20,10 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
       throw response;
     })
     .then(function (data) {
-      jessicaObject = data.find((e) => e.name === "Jessica Taylor");
-      displayProfile(jessicaObject);
+      let jessicaObject = data.find((e) => e.name === "Jessica Taylor");
 
-      namesList = data.map((e) => {
+      let namesList = data.map((e) => {
         return {
           name: e.name,
           gender: e.gender,
@@ -32,12 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
         };
       });
 
-      displayDiagnosisList(jessicaObject.diagnostic_list);
-      displayPatientsList(namesList);
-      displayLabResultsList(jessicaObject.lab_results);
-      displayHealthIndicatiors(jessicaObject.diagnosis_history[0]);
-      displayBloodPressure(jessicaObject.diagnosis_history[0].blood_pressure);
-      dispalyChart(jessicaObject.diagnosis_history);
+      if (jessicaObject) {
+        displayProfile(jessicaObject);
+        displayDiagnosisList(jessicaObject.diagnostic_list);
+        displayPatientsList(namesList);
+        displayLabResultsList(jessicaObject.lab_results);
+        displayHealthIndicatiors(jessicaObject.diagnosis_history[0]);
+        displayBloodPressure(jessicaObject.diagnosis_history[0].blood_pressure);
+        dispalyChart(jessicaObject.diagnosis_history);
+      }
     })
     .catch(function (error) {
       console.warn(error);
@@ -103,8 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         patientListElement.appendChild(patientItem);
       });
-    } else {
-      console.error("The user list element is missing from the HTML.");
     }
   }
   function displayDiagnosisList(list) {
@@ -124,8 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         diagnosisListElement.appendChild(diagnosisItem);
       });
-    } else {
-      console.error("The diagnosis list element is missing from the HTML.");
     }
   }
   function displayLabResultsList(list) {
@@ -147,8 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         labResultsListElement.appendChild(labResItem);
       });
-    } else {
-      console.error("The lab results list element is missing from the HTML.");
     }
   }
 
@@ -239,27 +230,27 @@ document.addEventListener("DOMContentLoaded", function () {
       return `${e.month.slice(0, 3)}, ${e.year}`;
     });
 
-    const sysData = historyArray.map((e) => {
+    const sysDataset = historyArray.map((e) => {
       return e.blood_pressure.systolic.value;
     });
-    const diasData = historyArray.map((e) => {
+    const diasDataset = historyArray.map((e) => {
       return e.blood_pressure.diastolic.value;
     });
 
-    new Chart("myChart", {
+    new Chart("historyChart", {
       type: "line",
       data: {
         labels: xValues,
         datasets: [
           {
-            data: sysData,
+            data: sysDataset,
             borderColor: "#C26EB4",
             fill: false,
             pointBackgroundColor: "#E66FD2",
             pointBorderColor: "white",
           },
           {
-            data: diasData,
+            data: diasDataset,
             borderColor: "#7E6CAB",
             fill: false,
             pointBackgroundColor: "#8C6FE6",
@@ -292,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function formatDate(date) {
     let dateElements = date.split("/");
-    let months = [
+    let monthsNames = [
       "January",
       "February",
       "March",
@@ -310,10 +301,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let monthNumber = dateElements[0];
     let day = dateElements[1];
     let year = dateElements[2];
-    let monthName = months.find((e, index) => index === monthNumber - 1);
+    let monthName = monthsNames.find((e, index) => index === monthNumber - 1);
 
-    let output = `${monthName} ${day}, ${year}`;
-
-    return output;
+    return `${monthName} ${day}, ${year}`;
   }
 });
