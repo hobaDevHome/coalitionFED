@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       displayLabResultsList(jessicaObject.lab_results);
       displayHealthIndicatiors(jessicaObject.diagnosis_history[0]);
       displayBloodPressure(jessicaObject.diagnosis_history[0].blood_pressure);
-
       dispalyChart(jessicaObject.diagnosis_history);
     })
     .catch(function (error) {
@@ -257,12 +256,14 @@ document.addEventListener("DOMContentLoaded", function () {
             borderColor: "#C26EB4",
             fill: false,
             pointBackgroundColor: "#E66FD2",
+            pointBorderColor: "white",
           },
           {
             data: diasData,
             borderColor: "#7E6CAB",
             fill: false,
             pointBackgroundColor: "#8C6FE6",
+            pointBorderColor: "white",
           },
         ],
       },
@@ -270,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
         legend: { display: false },
         elements: {
           point: {
-            radius: 5,
+            radius: 6,
           },
         },
         scales: {

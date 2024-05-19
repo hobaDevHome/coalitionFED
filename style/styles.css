@@ -54,6 +54,7 @@ body {
   height: 72px;
   margin-left: 18px;
   margin-right: 18px;
+  margin-bottom: 0;
 }
 
 .logoContainer {
@@ -116,7 +117,7 @@ body {
   align-items: start;
 }
 .vert-separtor {
-  height: 40px;
+  height: 44px;
   background-color: #e3e4e6;
   width: 1px;
   margin-right: 19px;
@@ -139,15 +140,27 @@ body {
   margin: 7px;
 }
 
-.patlist,
 .diaglist {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 16px;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0;
+}
+.patient_col {
+  margin-top: 32px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 0;
+  margin-right: 18px;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 1054px;
 }
 
@@ -156,27 +169,29 @@ body {
   flex-direction: row;
   width: 100%;
   font-weight: bold;
+  padding-left: 20px;
   justify-content: space-between;
-  padding: 15px;
 }
 
 .list-group {
   margin-top: 10px;
-  max-height: 960px;
+  max-height: 980px;
   overflow-x: hidden;
   overflow-y: auto;
+  margin-left: 0;
+  padding-left: -18px;
+  width: 100%;
 }
 
 .list-item {
   display: flex;
   flex-direction: row;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
 
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  margin-right: 1px;
+
+  margin-right: 2px;
 }
 .list-item:hover {
   background-color: #d8fcf7;
@@ -203,13 +218,13 @@ body {
   color: #707070;
 }
 .column_title {
-  font-weight: bold;
+  font-weight: 800;
   text-align: left;
+  font-size: 24px;
 }
 
 /* ///////////// diagnostic list ///////////////// */
 .diaglist {
-  padding: 15px;
   height: 296px;
 }
 
@@ -248,7 +263,7 @@ body {
 /* /////////////////// lab results ///////////////// */
 .labList {
   background-color: #fff;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
 }
 .lab-list-group {
@@ -273,21 +288,32 @@ body {
 }
 
 /* //////////// profile ////////////// */
+.profile-container {
+  padding: 0;
+  height: 1054px;
+}
 .profile {
   background-color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 17px;
-  margin-bottom: 25px;
+
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 16px;
+  margin-top: 18px;
+  margin-bottom: 32px;
+  margin-right: 0;
+  padding-right: 0;
 }
 .profile_img {
   width: 200px;
   height: 200px;
-  margin-top: 32px;
+  margin-top: 17px;
 }
 .patientDataLine {
   display: flex;
   flex-direction: row;
+  margin-bottom: 24px;
+  margin-top: 0;
 }
 
 .patientDataLineDetails {
@@ -297,7 +323,6 @@ body {
   color: #072635;
   align-items: start;
   margin-left: 16px;
-  margin-bottom: 24px;
 }
 
 .dobData {
@@ -308,10 +333,7 @@ body {
   text-align: center;
   margin-top: 24px;
   margin-bottom: 32px;
-}
-
-.profile_col {
-  /* height: 1054px; */
+  font-weight: 800;
 }
 
 .showButton {
@@ -341,7 +363,7 @@ body {
 /* /////////////////// diagnositic history ////////////// */
 .diagHistory {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 16px;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
@@ -370,7 +392,7 @@ body {
 }
 .line2 {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 800;
 }
 .line3 {
   font-size: 14px;
