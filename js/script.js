@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       displayPatientsList(namesList);
       displayLabResultsList(jessicaObject.lab_results);
       displayHealthIndicatiors(jessicaObject.diagnosis_history[0]);
+      displayBloodPressure(jessicaObject.diagnosis_history[0].blood_pressure);
     })
     .catch(function (error) {
       console.warn(error);
@@ -147,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("The lab results list element is missing from the HTML.");
     }
   }
+
   function displayHealthIndicatiors(history) {
     const respiratory_value = document.getElementById("respiratory_value");
     const respiratory_level = document.getElementById("respiratory_level");
@@ -177,11 +179,49 @@ document.addEventListener("DOMContentLoaded", function () {
       if (history.heart_rate.levels == "Lower than Average") {
         heart_rate_icon.src = "images/ArrowDown.svg";
         heart_rate_icon.style.display = "block";
-      } else if (history.heart_.levels == "Normal") {
+      } else if (history.heart_rate.levels == "Normal") {
         heart_rate_icon.style.display = "none";
-      } else if (history.heart_rate.levels == "") {
+      } else if (history.heart_rate.levels == "Higher than Average") {
         heart_rate_icon.src = "images/ArrowUp.svg";
         heart_rate_icon.style.display = "block";
+      }
+    }
+  }
+  function displayBloodPressure(bp) {
+    const systolic_value = document.getElementById("systolic_value");
+    const systolic_levels = document.getElementById("systolic_levels");
+    const systolic_icon = document.getElementById("systolic_icon");
+
+    const diastolic_value = document.getElementById("diastolic_value");
+    const diastolic_levels = document.getElementById("diastolic_levels");
+    const diastolic_icon = document.getElementById("diastolic_icon");
+
+    if (systolic_value) systolic_value.textContent = bp.systolic.value;
+    if (systolic_levels) systolic_levels.textContent = bp.systolic.levels;
+    if (diastolic_value) diastolic_value.textContent = bp.diastolic.value;
+    if (diastolic_levels) diastolic_levels.textContent = bp.diastolic.levels;
+
+    if (systolic_icon) {
+      if (bp.systolic.levels == "Lower than Average") {
+        systolic_icon.src = "images/ArrowDown.svg";
+        systolic_icon.style.display = "block";
+      } else if (bp.systolic.levels == "Normal") {
+        systolic_icon.style.display = "none";
+      } else if (bp.systolic.levels == "Higher than Average") {
+        systolic_icon.src = "images/ArrowUp.svg";
+        systolic_icon.style.display = "block";
+      }
+    }
+
+    if (diastolic_icon) {
+      if (bp.diastolic.levels == "Lower than Average") {
+        diastolic_icon.src = "images/ArrowDown.svg";
+        diastolic_icon.style.display = "block";
+      } else if (bp.systolic.levels == "Normal") {
+        diastolic_icon.style.display = "none";
+      } else if (bp.systolic.levels == "Higher than Average") {
+        diastolic_icon.src = "images/ArrowUp.svg";
+        diastolic_icon.style.display = "block";
       }
     }
   }

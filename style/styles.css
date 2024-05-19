@@ -360,6 +360,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 200px;
+  margin-left: 40px;
 
   align-items: start;
 }
@@ -414,4 +415,18 @@ p {
   background-color: #cbc8d4;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.chart-time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.six-month {
+  margin-right: 16px;
 }

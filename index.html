@@ -82,7 +82,18 @@
               <h4 class="column_title">Diagnosis History</h4>
               <div class="chartblock">
                 <div class="chart-container">
-                  <div class="chart_title">Blood Pressure</div>
+                  <div class="title-container">
+                    <div class="chart_title">Blood Pressure</div>
+                    <div class="chart-time">
+                      <div class="six-month">Last 6 months</div>
+                      <div>
+                        <img
+                          src="images/expand_more_FILL0_wght300_GRAD0_opsz24.svg"
+                          alt="Systolic indication"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="blood-pressur-contianer">
@@ -91,16 +102,17 @@
                       <div class="circle circle1"></div>
                       <div class="sys-text">Systolic</div>
                     </div>
-                    <div class="sys-data">160</div>
+                    <div id="systolic_value" class="sys-data"></div>
 
                     <div class="sys-arrow-container">
                       <div>
                         <img
-                          src="images/ArrowDown.svg"
+                          src=""
                           alt="Systolic indication"
+                          id="systolic_icon"
                         />
                       </div>
-                      <div class="sys-text">Lower than Average</div>
+                      <div id="systolic_levels" class="sys-text"></div>
                     </div>
                   </div>
                   <div class="separtor"></div>
@@ -109,16 +121,17 @@
                       <div class="circle circle2"></div>
                       <div class="sys-text">Diastolic</div>
                     </div>
-                    <div class="sys-data">78</div>
+                    <div id="diastolic_value" class="sys-data"></div>
 
                     <div class="sys-arrow-container">
                       <div>
                         <img
-                          src="images/ArrowDown.svg"
+                          src=""
                           alt="Systolic indication"
+                          id="diastolic_icon"
                         />
                       </div>
-                      <div class="sys-text">Lower than Average</div>
+                      <div id="diastolic_levels" class="sys-text"></div>
                     </div>
                   </div>
                 </div>
