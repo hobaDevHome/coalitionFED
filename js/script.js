@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
           pic: e.profile_picture,
         };
       });
-      // console.log("jessicaObject", data);
+
       displayDiagnosisList(jessicaObject.diagnostic_list);
       displayPatientsList(namesList);
       displayLabResultsList(jessicaObject.lab_results);
@@ -306,7 +306,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "December",
     ];
 
-    console.log(dateElements);
     let monthNumber = dateElements[0];
     let day = dateElements[1];
     let year = dateElements[2];
