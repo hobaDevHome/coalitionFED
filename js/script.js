@@ -31,12 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
           pic: e.profile_picture,
         };
       });
-      console.log("jessicaObject", data);
+      // console.log("jessicaObject", data);
       displayDiagnosisList(jessicaObject.diagnostic_list);
       displayPatientsList(namesList);
       displayLabResultsList(jessicaObject.lab_results);
       displayHealthIndicatiors(jessicaObject.diagnosis_history[0]);
       displayBloodPressure(jessicaObject.diagnosis_history[0].blood_pressure);
+
+      dispalyChart(jessicaObject.diagnosis_history);
     })
     .catch(function (error) {
       console.warn(error);
@@ -224,5 +226,66 @@ document.addEventListener("DOMContentLoaded", function () {
         diastolic_icon.style.display = "block";
       }
     }
+  }
+  function dispalyChart(patintHistory) {
+    let historyArray;
+    if (patintHistory.length > 6) {
+      historyArray = patintHistory.slice(0, 6).reverse();
+    } else {
+      historyArray = patintHistory.reverse();
+    }
+    let xValues = historyArray.map((e) => {
+      return `${e.month.slice(0, 3)}, ${e.year}`;
+    });
+
+    const sysData = historyArray.map((e) => {
+      return e.blood_pressure.systolic.value;
+    });
+    const diasData = historyArray.map((e) => {
+      return e.blood_pressure.diastolic.value;
+    });
+    console.log(historyArray, sysData, diasData);
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: sysData,
+            borderColor: "#C26EB4",
+            fill: false,
+            pointBackgroundColor: "#E66FD2",
+          },
+          {
+            data: diasData,
+            borderColor: "#7E6CAB",
+            fill: false,
+            pointBackgroundColor: "#8C6FE6",
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+        elements: {
+          point: {
+            radius: 5,
+          },
+        },
+        scales: {
+          y: {
+            top: 180,
+            bottom: 60,
+          },
+          xAxes: [
+            {
+              gridLines: {
+                display: false,
+              },
+            },
+          ],
+        },
+      },
+    });
   }
 });

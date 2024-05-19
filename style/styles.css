@@ -391,6 +391,9 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+.graph-div {
+  padding-top: 28px;
+}
 .blood-pressur-contianer {
   display: flex;
   flex-direction: column;
@@ -456,6 +459,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-right: 16px;
 }
 .chart-time {
   display: flex;
