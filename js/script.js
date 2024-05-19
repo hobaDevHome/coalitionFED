@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let jessicaObject;
   let namesList;
 
-  // Authenticate (dummy API)
   fetch("https://fedskillstest.coalitiontechnologies.workers.dev", {
     headers: {
       Authorization: `Basic ${auth}`,
@@ -32,10 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
           pic: e.profile_picture,
         };
       });
-      console.log("jessicaObject", jessicaObject);
+      console.log("jessicaObject", data);
       displayDiagnosisList(jessicaObject.diagnostic_list);
       displayPatientsList(namesList);
       displayLabResultsList(jessicaObject.lab_results);
+      displayHealthIndicatiors(jessicaObject.diagnosis_history[0]);
     })
     .catch(function (error) {
       console.warn(error);
@@ -145,6 +145,44 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     } else {
       console.error("The lab results list element is missing from the HTML.");
+    }
+  }
+  function displayHealthIndicatiors(history) {
+    const respiratory_value = document.getElementById("respiratory_value");
+    const respiratory_level = document.getElementById("respiratory_level");
+
+    const temperature_value = document.getElementById("temperature_value");
+    const temperature_level = document.getElementById("temperature_level");
+
+    const heart_rate_value = document.getElementById("heart_rate_value");
+    const heart_rate_icon = document.getElementById("heart_rate_icon");
+    const heart_rate_level = document.getElementById("heart_rate_level");
+
+    if (respiratory_value)
+      respiratory_value.textContent = `${history.respiratory_rate.value} bpm`;
+    if (respiratory_level)
+      respiratory_level.textContent = history.respiratory_rate.levels;
+
+    if (temperature_value)
+      temperature_value.textContent = history.temperature.value + "\u00B0F";
+    if (temperature_level)
+      temperature_level.textContent = history.temperature.levels;
+
+    if (heart_rate_value)
+      heart_rate_value.textContent = `${history.heart_rate.value} bpm`;
+    if (heart_rate_level)
+      heart_rate_level.textContent = history.heart_rate.levels;
+
+    if (heart_rate_icon) {
+      if (history.heart_rate.levels == "Lower than Average") {
+        heart_rate_icon.src = "images/ArrowDown.svg";
+        heart_rate_icon.style.display = "block";
+      } else if (history.heart_.levels == "Normal") {
+        heart_rate_icon.style.display = "none";
+      } else if (history.heart_rate.levels == "") {
+        heart_rate_icon.src = "images/ArrowUp.svg";
+        heart_rate_icon.style.display = "block";
+      }
     }
   }
 });

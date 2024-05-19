@@ -80,6 +80,49 @@
           <div class="col-6">
             <div class="diagHistory">
               <h4 class="column_title">Diagnosis History</h4>
+              <div class="chartblock">
+                <div class="chart-container">
+                  <div class="chart_title">Blood Pressure</div>
+                </div>
+
+                <div class="blood-pressur-contianer">
+                  <div class="systolic">
+                    <div class="sys-line">
+                      <div class="circle circle1"></div>
+                      <div class="sys-text">Systolic</div>
+                    </div>
+                    <div class="sys-data">160</div>
+
+                    <div class="sys-arrow-container">
+                      <div>
+                        <img
+                          src="images/ArrowDown.svg"
+                          alt="Systolic indication"
+                        />
+                      </div>
+                      <div class="sys-text">Lower than Average</div>
+                    </div>
+                  </div>
+                  <div class="separtor"></div>
+                  <div class="systolic">
+                    <div class="sys-line">
+                      <div class="circle circle2"></div>
+                      <div class="sys-text">Diastolic</div>
+                    </div>
+                    <div class="sys-data">78</div>
+
+                    <div class="sys-arrow-container">
+                      <div>
+                        <img
+                          src="images/ArrowDown.svg"
+                          alt="Systolic indication"
+                        />
+                      </div>
+                      <div class="sys-text">Lower than Average</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class="histoyrBlocks">
                 <div class="histoyrBlock block1">
@@ -88,27 +131,30 @@
                     alt="respiratory rate"
                   />
                   <div class="line1">Respiratory Rate</div>
-                  <div class="line2">20 bpm</div>
-                  <div class="line3">Normal</div>
+                  <div class="line2" id="respiratory_value"></div>
+                  <div class="line3" id="respiratory_level">Normal</div>
                 </div>
                 <div class="histoyrBlock block2">
                   <img src="images/temperature.svg" alt="Temperature" />
                   <div class="line1">Temperature</div>
-                  <div class="line2">98.6°F</div>
-                  <div class="line3">Normal</div>
+                  <div class="line2" id="temperature_value"></div>
+                  <div class="line3" id="temperature_level"></div>
                 </div>
                 <div class="histoyrBlock block3">
                   <img src="images/HeartBPM.svg" alt="Heart Rate" />
                   <div class="line1">Heart Rate</div>
-                  <div class="line2">20 bpm</div>
+                  <div class="line2" id="heart_rate_value"></div>
                   <div class="line3 heartindicator">
                     <div>
                       <img
-                        src="images/ArrowDown.svg"
+                        src=""
                         alt="heart rate indications"
+                        id="heart_rate_icon"
                       />
                     </div>
-                    <div class="heartIndcText">Lower than Average</div>
+                    <div class="heartIndcText" id="heart_rate_level">
+                      Lower than Average
+                    </div>
                   </div>
                 </div>
               </div>

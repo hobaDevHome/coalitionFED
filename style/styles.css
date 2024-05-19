@@ -339,3 +339,79 @@ p {
 .heartIndcText {
   margin-left: 8px;
 }
+
+/* ////////////// chart block /////////////// */
+.chartblock {
+  background-color: #f4f0fe;
+  border-radius: 12px;
+  color: #072635;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.chart_title {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+.blood-pressur-contianer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+
+  align-items: start;
+}
+.chart-container {
+  flex: 1;
+}
+.systolic {
+  display: flex;
+  flex-direction: column;
+}
+.sys-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  margin-right: 4px;
+}
+.circle1 {
+  background-color: #e66fd2;
+}
+.circle2 {
+  background-color: #8c6fe6;
+}
+.sys-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+.sys-data {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 8px;
+}
+.sys-arrow-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+  justify-content: start;
+}
+.sys-text {
+  margin-left: 8px;
+}
+
+.separtor {
+  height: 1px;
+  width: 100%;
+  background-color: #cbc8d4;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
